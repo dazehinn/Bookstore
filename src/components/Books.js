@@ -1,32 +1,16 @@
-import { useState } from 'react';
-import Book from './Book';
+import { useSelector } from 'react-redux';
 import AddBook from './AddBook';
+import Book from './Book';
 
 const BookList = () => {
-  // eslint-disable-next-line no-unused-vars
-  const [bookArray, setBookArray] = useState(
-    [
-      {
-        title: 'The Hunger Games',
-        author: 'Suzanne Collins',
-      },
-      {
-        title: 'Dune',
-        author: 'Frank Herbert',
-      },
-      {
-        title: 'Capital in the Twenty-First Century',
-        author: 'Suzanne Collins',
-      },
-    ],
-  );
+  const bookArray = useSelector((state) => state.book.booksArray);
 
   return (
     <section className="bookList">
       <ul>
         {bookArray.map((elem) => (
           <li key={elem.title}>
-            <Book title={elem.title} author={elem.author} />
+            <Book id={elem.id} title={elem.title} author={elem.author} />
           </li>
         ))}
       </ul>
