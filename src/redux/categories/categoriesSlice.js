@@ -4,8 +4,8 @@ const initialState = {
   categoriesArray: [],
 };
 
-export const categoriesSlice = createSlice({
-  name: 'Categories',
+export const categorieSlice = createSlice({
+  name: 'Categorie',
   initialState,
   reducers: {
     checkStatus: (state) => {
@@ -14,6 +14,6 @@ export const categoriesSlice = createSlice({
   },
 });
 
-export const { checkStatus } = categoriesSlice.actions;
+export const { checkStatus } = categorieSlice.actions;
 
-export default categoriesSlice.reducer;
+export default categorieSlice.reducer;
