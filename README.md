@@ -72,7 +72,7 @@
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-- [view demo here](https://math-magicians-gg5c.onrender.com/)
+Coming soon ...
 <!--  
 - [Video presentation](https://www.loom.com/share/)
 -->
@@ -101,7 +101,7 @@ In order to run this project you need:
 - [ ] Clone this repository to your desired folder:
 
 ```
-coming soon...
+git clone https://github.com/dazehinn/Bookstore.git
 ```
 
 ```
