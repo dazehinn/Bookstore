@@ -2,7 +2,6 @@ import { useSelector } from 'react-redux';
 import { v4 as uuidv4 } from 'uuid';
 import AddBook from './AddBook';
 import Book from './Book';
-import style from './Books.module.css';
 
 const BookList = () => {
   const state = useSelector((state) => state.book);
@@ -12,8 +11,8 @@ const BookList = () => {
   }
 
   return (
-    <section className={style.sectionBooks}>
-      <ul className={style.ul}>
+    <section>
+      <ul>
         {Object.entries(state.bookArray).map(([key]) => (
           <Book
             key={uuidv4()}
