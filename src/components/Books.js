@@ -1,9 +1,15 @@
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
+import { useEffect } from 'react';
 import { v4 as uuidv4 } from 'uuid';
 import AddBook from './AddBook';
 import Book from './Book';
+import { fetchGetBooks } from '../redux/books/booksSlice';
 
 const BookList = () => {
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(fetchGetBooks());
+  }, [dispatch]);
   const state = useSelector((state) => state.book);
 
   if (!state.bookArray) {
