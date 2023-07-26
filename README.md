@@ -72,7 +72,7 @@
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-- [view demo here](https://math-magicians-gg5c.onrender.com/)
+Coming soon ...
 <!--  
 - [Video presentation](https://www.loom.com/share/)
 -->
