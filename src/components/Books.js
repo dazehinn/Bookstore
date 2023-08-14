@@ -10,6 +10,7 @@ const BookList = () => {
   useEffect(() => {
     dispatch(fetchGetBooks());
   }, [dispatch]);
+
   const state = useSelector((state) => state.book);
 
   if (!state.bookArray) {
@@ -17,8 +18,8 @@ const BookList = () => {
   }
 
   return (
-    <section>
-      <ul>
+    <section className={style.sectionBooks}>
+      <ul className={style.ul}>
         {Object.entries(state.bookArray).map(([key]) => (
           <Book
             key={uuidv4()}
