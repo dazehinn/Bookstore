@@ -4,6 +4,7 @@ import { v4 as uuidv4 } from 'uuid';
 import AddBook from './AddBook';
 import Book from './Book';
 import { fetchGetBooks } from '../redux/books/booksSlice';
+import style from './Book.module.css';
 
 const BookList = () => {
   const dispatch = useDispatch();
