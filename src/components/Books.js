@@ -1,33 +1,34 @@
-import { useState } from 'react';
-import Book from './Book';
+import { useDispatch, useSelector } from 'react-redux';
+import { useEffect } from 'react';
+import { v4 as uuidv4 } from 'uuid';
 import AddBook from './AddBook';
+import Book from './Book';
+import { fetchGetBooks } from '../redux/books/booksSlice';
+import style from './Book.module.css';
 
 const BookList = () => {
-  // eslint-disable-next-line no-unused-vars
-  const [bookArray, setBookArray] = useState(
-    [
-      {
-        title: 'The Hunger Games',
-        author: 'Suzanne Collins',
-      },
-      {
-        title: 'Dune',
-        author: 'Frank Herbert',
-      },
-      {
-        title: 'Capital in the Twenty-First Century',
-        author: 'Suzanne Collins',
-      },
-    ],
-  );
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(fetchGetBooks());
+  }, [dispatch]);
+
+  const state = useSelector((state) => state.book);
+
+  if (!state.bookArray) {
+    return <h1>Loading...</h1>;
+  }
 
   return (
-    <section className="bookList">
-      <ul>
-        {bookArray.map((elem) => (
-          <li key={elem.title}>
-            <Book title={elem.title} author={elem.author} />
-          </li>
+    <section className={style.sectionBooks}>
+      <ul className={style.ul}>
+        {Object.entries(state.bookArray).map(([key]) => (
+          <Book
+            key={uuidv4()}
+            id={key}
+            title={state.bookArray[key][0].title}
+            author={state.bookArray[key][0].author}
+            category={state.bookArray[key][0].category}
+          />
         ))}
       </ul>
       <AddBook />

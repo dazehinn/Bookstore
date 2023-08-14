@@ -1,0 +1,10 @@
+.sectionBooks {
+  width: 100%;
+  padding: 1.438rem 6.188rem 1.688rem 6.25rem;
+}
+
+.ul {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
