@@ -3,7 +3,6 @@ import style from './Header.module.css';
 import user from '../assets/images/user.png';
 
 const Header = () => (
-
   <div className={style.header}>
     <nav className={style.nav}>
       <ul className={style.ul}>
