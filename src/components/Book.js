@@ -4,7 +4,6 @@ import { fetchDeleteBooks, fetchGetBooks } from '../redux/books/booksSlice';
 import style from './Book.module.css';
 import loading from '../assets/images/loading.png';
 
-
 const Book = (props) => {
   const {
     id, author, title, category,
