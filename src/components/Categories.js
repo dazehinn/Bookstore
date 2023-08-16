@@ -10,7 +10,7 @@ const Categories = () => {
   };
 
   return (
-    <section className="categories">
+    <section>
       <button onClick={handleCheckStatus} type="button">Check status</button>
       {categoriesArray.length > 0 ? <p>{categoriesArray[0]}</p> : <p> </p>}
     </section>
