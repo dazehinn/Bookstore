@@ -23,7 +23,9 @@ function App() {
         <Route index element={<Books />} />
         <Route path="books" element={<Books />} />
         <Route path="categories" element={<Categories />} />
+
         <Route path="*" element={<div>Sorry. The page you are looking for does not exist</div>} />
+
       </Routes>
     </BrowserRouter>
   );
